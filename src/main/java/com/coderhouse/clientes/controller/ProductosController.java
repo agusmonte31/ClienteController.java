@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -15,7 +16,7 @@ public class ProductosController {
 
 
     @Autowired
-    private ProductosService productosService;
+    ProductosService productosService;
 
     public ProductosController(ProductosService productosService) {
         this.productosService = productosService;
@@ -33,15 +34,15 @@ public class ProductosController {
 
     @GetMapping("/{IdProductos}")
     public Optional<Productos> buscarPorIdproductos(@PathVariable Long Idproductos) {
-        return productosService.buscarPorIdProductos(Idproductos);
+        return ProductosService.buscarPorIdProductos(Idproductos);
     }
 
 
     @PostMapping("/crear")
     public Productos nuevoProducto(@RequestBody Productos productos){
-        return (Productos) productosService;};
+        return productosService.crear(productos) ;};
 
     @PostMapping("/actualizar")
     public Productos actualizarProductos(@RequestBody Productos productos){
-        return productosService.actualizarProductos(productos);}
+        return ProductosService.actualizarProductos(productos);}
 }

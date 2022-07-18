@@ -354,3 +354,17 @@ Data conversion error converting "DOUBLE PRECISION to DATE" [22018-214]
 2022-07-17 21:40:15 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "DOUBLE PRECISION to DATE"
 Data conversion error converting "DOUBLE PRECISION to DATE" [22018-214]
+2022-07-17 21:41:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "DOUBLE PRECISION to DATE"
+Data conversion error converting "DOUBLE PRECISION to DATE" [22018-214]
+2022-07-17 21:43:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Conversión de datos fallida, convirtiendo "DOUBLE PRECISION to DATE"
+Data conversion error converting "DOUBLE PRECISION to DATE" [22018-214]
+2022-07-17 23:09:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime [*]DATE, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) )"; se esperaba "(, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime [*]DATE, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) )"; expected "(, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime DATE, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) ) [42001-214]
+2022-07-17 23:12:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime [*]int, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) )"; se esperaba "(, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"
+Syntax error in SQL statement "CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime [*]int, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) )"; expected "(, ARRAY, INVISIBLE, VISIBLE, NOT NULL, NULL, AS, DEFAULT, GENERATED, ON UPDATE, NOT NULL, NULL, AUTO_INCREMENT, DEFAULT ON NULL, NULL_TO_DEFAULT, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+CREATE TABLE COMPROBANTES ( IdComprobante int not null, Fecha datetime int, Cantidad int not null, PrecioNeto int, Impuesto int, PrecioTotal int not null, DNI int not null, primary key (IdComprobante) ) [42001-214]

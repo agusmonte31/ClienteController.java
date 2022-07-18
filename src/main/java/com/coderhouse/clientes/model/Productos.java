@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.sql.Date;
+import java.util.List;
 
 @Entity
 @Table(name="PRODUCTOS")
@@ -67,4 +68,6 @@ public class Productos {
     public void setPrecio(Date precio) {
         this.precio = precio;
     }
-}
+
+    }
+

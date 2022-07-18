@@ -12,7 +12,7 @@ CREATE TABLE PRODUCTOS (
 IdProducto INT not null,
 Codigo VARCHAR(10)NOT NULL,
 Cantidad int,
-Precio FLOAT,
+Precio int,
 primary key(IdProducto)
 );
 
@@ -20,7 +20,7 @@ primary key(IdProducto)
 DROP TABLE COMPROBANTES IF EXISTS;
 CREATE TABLE COMPROBANTES (
 IdComprobante int not null,
-Fecha datetime not null,
+Fecha DATE,
 Cantidad int not null,
 PrecioNeto int,
 Impuesto int,
