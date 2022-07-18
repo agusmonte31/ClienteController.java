@@ -46,4 +46,9 @@ public class ClienteServiceImpl implements ClienteService{
     public List<Cliente> getAll() {
         return repository.findAll();
     }
+
+    @Override
+    public ClienteDto actualizarCliente(Cliente cliente) {
+        return null;
+    }
 }
