@@ -9,5 +9,7 @@ public interface ClienteService {
     ClienteDto buscarPorDni(Long dni);
     List<Cliente> getAll();
 
-    ClienteDto actualizarCliente(Cliente cliente);
+    Cliente actualizarCliente(Cliente cliente);
+
+    Object nuevoCliente(Cliente cliente);
 }

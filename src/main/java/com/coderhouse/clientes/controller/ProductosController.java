@@ -34,15 +34,15 @@ public class ProductosController {
 
     @GetMapping("/{IdProductos}")
     public Optional<Productos> buscarPorIdproductos(@PathVariable Long Idproductos) {
-        return ProductosService.buscarPorIdProductos(Idproductos);
+        return productosService.buscarPorIdProductos(Idproductos);
     }
 
 
     @PostMapping("/crear")
     public Productos nuevoProducto(@RequestBody Productos productos){
-        return productosService.crear(productos) ;};
+        return productosService.nuevoProducto(productos) ;};
 
-    @PostMapping("/actualizar")
+    @PutMapping("/actualizar")
     public Productos actualizarProductos(@RequestBody Productos productos){
-        return ProductosService.actualizarProductos(productos);}
+        return productosService.actualizarProductos(productos);}
 }

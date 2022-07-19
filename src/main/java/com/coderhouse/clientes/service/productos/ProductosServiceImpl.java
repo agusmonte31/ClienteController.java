@@ -5,34 +5,30 @@ import com.coderhouse.clientes.repository.ProductosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
-
-public class ProductosServiceImpl implements ProductosService {
-    @Autowired
-    private ProductosRepository repository;
-    Productos productos;
+public class ProductosServiceImpl implements ProductosService{
+    @Autowired ProductosRepository productosRepository;
 
     @Override
-    public List<Productos> getAll() {return repository.findAll();
+    public Object getAll() {
+        return productosRepository.findAll();
     }
 
     @Override
-    public Productos crear(Productos productos) {
-        return productos;
+    public Optional<Productos> buscarPorIdProductos(Long idproductos) {
+        return productosRepository.findById(idproductos);
+    }
+
+    @Override
+    public Productos nuevoProducto(Productos productos) {
+        return productosRepository.save(productos);
     }
 
 
     @Override
-    public List<Productos> traerProductos() {
-        return null;
+    public Productos actualizarProductos(Productos productos) {
+        return productosRepository.save(productos);
     }
-
-    @Override
-    public Productos nuevoProducto(Productos productos){ return productos;}
-    public Productos actualizarProductos(Productos productos){ return productos;
-    }
-
 }
-

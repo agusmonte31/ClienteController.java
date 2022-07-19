@@ -8,27 +8,22 @@ import java.sql.Date;
 
 
     @Entity
-    @Table(name="COMPROBANTE")
+    @Table(name="COMPROBANTES")
     public class Comprobantes {
 
 
-        //Creo las columnas IdCOMPROBANTE,FECHA,CANTIDAD,PRECIONETO,IMPUESTO,PRECIOTOTAL,DNI, e IDCLIENTE
+        //Creo las columnas IdCOMPROBANTE,FECHA,CANTIDAD,PRECIONETO,IMPUESTO,PRECIOTOTAL
         @Column(name = "IdCOMPROBANTE")
         @Id
         private long Idcomprobante;
-        @Column(name = "FECHA")
-        private Date fecha;
-        @Column(name = "CANTIDAD")
-        private String cantidad;
-        @Column(name = "PRECIONETO")
-        private String precioneto;
-        @Column(name = "IMPUESTO")
-        private String impuesto;
-        @Column(name = "PRECIOTOTAL")
-        private String preciototal;
-        @Column(name = "DNI")
-        private String dni;
-
+        @Column(name = "FECHA_COMPROBANTE")
+        private Date fecha_comprobante;
+        @Column(name = "CANTIDAD_COMPROBANTE")
+        private String cantidad_comprobante;
+        @Column(name = "PRECIONETO_COMPROBANTE")
+        private String precioneto_comprobante;
+        @Column(name = "PRECIOTOTAL_COMPROBANTE")
+        private String preciototal_comprobante;
 
         //Constructor
 
@@ -36,14 +31,12 @@ import java.sql.Date;
         public Comprobantes() {
         }
 
-        public Comprobantes(long idcomprobante, Date fecha, String cantidad, String precioneto, String impuesto, String preciototal, String dni, String idcliente) {
+        public Comprobantes(long idcomprobante, Date fecha_comprobante, String cantidad_comprobante, String precioneto_comprobante, String preciototal_comprobante) {
             Idcomprobante = idcomprobante;
-            this.fecha = fecha;
-            this.cantidad = cantidad;
-            this.precioneto = precioneto;
-            this.impuesto = impuesto;
-            this.preciototal = preciototal;
-            this.dni = dni;
+            this.fecha_comprobante = fecha_comprobante;
+            this.cantidad_comprobante = cantidad_comprobante;
+            this.precioneto_comprobante= precioneto_comprobante;
+            this.preciototal_comprobante = preciototal_comprobante;
 
         }
 
@@ -58,67 +51,47 @@ import java.sql.Date;
             Idcomprobante = idcomprobante;
         }
 
-        public Date getFecha() {
-            return fecha;
+        public Date getFecha_comprobante() {
+            return fecha_comprobante;
         }
 
-        public void setFecha(Date fecha) {
-            this.fecha = fecha;
+        public void setFecha_comprobante(Date fecha_comprobante) {
+            this.fecha_comprobante = fecha_comprobante;
         }
 
-        public String getCantidad() {
-            return cantidad;
+        public String getCantidad_comprobante() {
+            return cantidad_comprobante;
         }
 
-        public void setCantidad(String cantidad) {
-            this.cantidad = cantidad;
+        public void setCantidad_comprobante(String cantidad_comprobante) {
+            this.cantidad_comprobante = cantidad_comprobante;
         }
 
-        public String getPrecioneto() {
-            return precioneto;
+        public String getPrecioneto_comprobante() {
+            return precioneto_comprobante;
         }
 
-        public void setPrecioneto(String precioneto) {
-            this.precioneto = precioneto;
+        public void setPrecioneto_comprobante(String precioneto_comprobante) {
+            this.precioneto_comprobante = precioneto_comprobante;
         }
 
-        public String getImpuesto() {
-            return impuesto;
+        public String getPreciototal_comprobante() {
+            return preciototal_comprobante;
         }
 
-        public void setImpuesto(String impuesto) {
-            this.impuesto = impuesto;
+        public void setPreciototal_comprobante(String preciototal_comprobante) {
+            this.preciototal_comprobante = preciototal_comprobante;
         }
-
-        public String getPreciototal() {
-            return preciototal;
-        }
-
-        public void setPreciototal(String preciototal) {
-            this.preciototal = preciototal;
-        }
-
-        public String getDni() {
-            return dni;
-        }
-
-        public void setDni(String dni) {
-            this.dni = dni;
-        }
-
-
 
         @Override
         public String toString() {
             return
                     "Comprobante{" +
                             "IdComprobante=" + Idcomprobante +
-                            "Fecha=" + fecha +
-                            "Cantidad=" + cantidad +
-                            "PrecioNeto=" + precioneto +
-                            "Impuesto=" + impuesto +
-                            "PrecioTotal=" + preciototal +
-                            "DNI=" + dni +
+                            "Fecha=" + fecha_comprobante +
+                            "Cantidad=" + cantidad_comprobante +
+                            "PrecioNeto=" + precioneto_comprobante +
+                            "PrecioTotal=" + preciototal_comprobante +
                             '}';
         }
     }

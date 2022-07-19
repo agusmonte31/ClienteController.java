@@ -6,7 +6,6 @@ import com.coderhouse.clientes.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.print.attribute.standard.MediaSize;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.time.Period;
@@ -48,7 +47,12 @@ public class ClienteServiceImpl implements ClienteService{
     }
 
     @Override
-    public ClienteDto actualizarCliente(Cliente cliente) {
-        return null;
+    public Cliente actualizarCliente(Cliente cliente) {
+        return repository.save(cliente);
+    }
+
+    @Override
+    public Object nuevoCliente(Cliente cliente) {
+        return repository.save(cliente);
     }
 }

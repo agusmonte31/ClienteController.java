@@ -11,22 +11,20 @@ DROP TABLE PRODUCTOS IF EXISTS;
 CREATE TABLE PRODUCTOS (
 IdProducto INT not null,
 Codigo VARCHAR(10)NOT NULL,
-Cantidad int,
-Precio int,
-primary key(IdProducto)
+Cantidad INT,
+Precio INT,
+PRIMARY KEY(IdProducto)
 );
 
 
 DROP TABLE COMPROBANTES IF EXISTS;
 CREATE TABLE COMPROBANTES (
-IdComprobante int not null,
-Fecha DATE,
-Cantidad int not null,
-PrecioNeto int,
-Impuesto int,
-PrecioTotal int not null,
-DNI int not null,
-primary key (IdComprobante)
+IdComprobante INT not null,
+fecha_comprobante DATE not null,
+cantidad_comprobante INT not null,
+precioneto_comprobante INT,
+preciototal_comprobante INT not null,
+PRIMARY KEY (IdComprobante)
 );
 
 

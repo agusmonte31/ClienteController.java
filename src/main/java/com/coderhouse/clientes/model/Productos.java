@@ -4,7 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Date;
 import java.util.List;
 
 @Entity
@@ -21,28 +20,32 @@ public class Productos {
     @Column(name = "CANTIDAD")
     private String cantidad;
     @Column(name = "PRECIO")
-    private Date precio;
+    private String precio;
 
     //Constructor
 
     public Productos() {
     }
 
-    public Productos(long idproducto, String codigo, String cantidad, Date precio) {
-        this.Idproducto = Idproducto;
+    public Productos(long idproducto, String codigo, String cantidad, String precio) {
+        Idproducto = idproducto;
         this.codigo = codigo;
         this.cantidad = cantidad;
         this.precio = precio;
     }
 
+    public static void save(Productos productos) {
+    }
+
     //Getters and Setters
+
 
     public long getIdproducto() {
         return Idproducto;
     }
 
     public void setIdproducto(long idproducto) {
-        Idproducto = Idproducto;
+        Idproducto = idproducto;
     }
 
     public String getCodigo() {
@@ -61,13 +64,14 @@ public class Productos {
         this.cantidad = cantidad;
     }
 
-    public Date getPrecio() {
+    public String getPrecio() {
         return precio;
     }
 
-    public void setPrecio(Date precio) {
+    public void setPrecio(String precio) {
         this.precio = precio;
     }
+}
 
-    }
+
 

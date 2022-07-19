@@ -32,10 +32,10 @@ public class ClienteController {
 
 
     @PostMapping("/crear")
-    public ClienteDto nuevoCliente(@RequestBody Cliente cliente){
-        return (ClienteDto) clienteService;};
+    public Cliente nuevoCliente(@RequestBody Cliente cliente){
+        return (Cliente) clienteService.nuevoCliente(cliente);};
 
-    @PostMapping("/actualizar")
-    public ClienteDto actualizarCliente(@RequestBody Cliente cliente){
+    @PutMapping("/actualizar")
+    public Cliente actualizarCliente(@RequestBody Cliente cliente){
         return clienteService.actualizarCliente(cliente);}
 }
